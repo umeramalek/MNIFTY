@@ -21,3 +21,11 @@ const typeDefs = gql`
     purchaseDate: String
     products: [Product]
   }
+
+  type User {
+    _id: ID
+    firstName: String
+    lastName: String
+    email: String
+    orders: [Order]
+  }
