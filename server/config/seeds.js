@@ -21,42 +21,42 @@ db.once('open', async () => {
     const products = await Product.insertMany([
         {
             name: "Delicate Arch",
-            description: "placeholder",
+            description: "A picture of Delicate Arch at Arches National Park",
             image: "placeholder",
             price: "placeholder",
             category: "placeholder"
         },
         {
             name: "Banana Cat",
-            description: "placeholder",
+            description: "A cat in a banana bed",
             image: "placeholder",
             price: "placeholder",
             category: "placeholder"
         },
         {
             name: "Vino Dog",
-            description: "placeholder",
+            description: "A sweet dog named Vino",
             image: "placeholder",
             price: "placeholder",
             category: "placeholder"
         },
         {
             name: "Sam and Bo",
-            description: "placeholder",
+            description: "'Sami' and his dog bo",
             image: "placeholder",
             price: "placeholder",
             category: "placeholder"
         },
         {
             name: "Farley",
-            description: "placeholder",
+            description: "The one and only, Farley",
             image: "placeholder",
             price: "placeholder",
             category: "placeholder"
         },
         {
             name: "Maya Cat",
-            description: "placeholder",
+            description: "Emily's cat Maya",
             image: "placeholder",
             price: "placeholder",
             category: "placeholder"
@@ -70,42 +70,42 @@ db.once('open', async () => {
         },
         {
             name: "Atlas",
-            description: "placeholder",
+            description: "A specially minted NFT for Catventure",
             image: "placeholder",
             price: "placeholder",
             category: "placeholder"
         },
         {
             name: "Coffee",
-            description: "placeholder",
+            description: "Cafe' Mocha",
             image: "placeholder",
             price: "placeholder",
             category: "placeholder"
         },
         {
             name: "Bison",
-            description: "placeholder",
+            description: "Lone Bison at Yellowstone National Park",
             image: "placeholder",
             price: "placeholder",
             category: "placeholder"
         },
         {
             name: "Two Bison",
-            description: "placeholder",
+            description: "Two Bison at Yellowstone National Park",
             image: "placeholder",
             price: "placeholder",
             category: "placeholder"
         },
         {
             name: "Cleo",
-            description: "placeholder",
+            description: "Furry predator named Cleopatra",
             image: "placeholder",
             price: "placeholder",
             category: "placeholder"
         },
         {
             name: "Weirdo",
-            description: "placeholder",
+            description: "Cartoonized NFT of a software developer",
             image: "placeholder",
             price: "placeholder",
             category: "placeholder"
