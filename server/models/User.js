@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-
 const { Schema } = mongoose;
 // importing bcrypt for password security
 const bcrypt = require('bcrypt');
