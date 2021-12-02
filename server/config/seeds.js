@@ -22,91 +22,91 @@ db.once('open', async () => {
         {
             name: "Delicate Arch",
             description: "A picture of Delicate Arch at Arches National Park",
-            image: "placeholder",
+            image: "delicate-arch.png",
             price: "placeholder",
             category: "placeholder"
         },
         {
             name: "Banana Cat",
             description: "A cat in a banana bed",
-            image: "placeholder",
+            image: "banana-cat1.png",
             price: "placeholder",
             category: "placeholder"
         },
         {
             name: "Vino Dog",
             description: "A sweet dog named Vino",
-            image: "placeholder",
+            image: "vino.png",
             price: "placeholder",
             category: "placeholder"
         },
         {
             name: "Sam and Bo",
             description: "'Sami' and his dog bo",
-            image: "placeholder",
+            image: "sam&bo.png",
             price: "placeholder",
             category: "placeholder"
         },
         {
             name: "Farley",
             description: "The one and only, Farley",
-            image: "placeholder",
+            image: "farley.png",
             price: "placeholder",
             category: "placeholder"
         },
         {
             name: "Maya Cat",
             description: "Emily's cat Maya",
-            image: "placeholder",
+            image: "maya.png",
             price: "placeholder",
             category: "placeholder"
         },
         {
             name: "Catventure",
             description: "placeholder",
-            image: "placeholder",
+            image: "catventure1.png",
             price: "placeholder",
             category: "placeholder"
         },
         {
             name: "Atlas",
             description: "A specially minted NFT for Catventure",
-            image: "placeholder",
+            image: "atlas.png",
             price: "placeholder",
             category: "placeholder"
         },
         {
             name: "Coffee",
             description: "Cafe' Mocha",
-            image: "placeholder",
+            image: "coffee.png",
             price: "placeholder",
             category: "placeholder"
         },
         {
             name: "Bison",
             description: "Lone Bison at Yellowstone National Park",
-            image: "placeholder",
+            image: "bison1.png",
             price: "placeholder",
             category: "placeholder"
         },
         {
             name: "Two Bison",
             description: "Two Bison at Yellowstone National Park",
-            image: "placeholder",
+            image: "bison.png",
             price: "placeholder",
             category: "placeholder"
         },
         {
             name: "Cleo",
             description: "Furry predator named Cleopatra",
-            image: "placeholder",
+            image: "cleo.png",
             price: "placeholder",
             category: "placeholder"
         },
         {
             name: "Weirdo",
             description: "Cartoonized NFT of a software developer",
-            image: "placeholder",
+            image: "cartoon.png",
             price: "placeholder",
             category: "placeholder"
         }
