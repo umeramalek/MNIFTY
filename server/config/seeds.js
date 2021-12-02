@@ -16,5 +16,80 @@ db.once('open', async () => {
 
     console.log("categories seeded");
 
-    
+    await Product.deleteMany();
+
+    const products = await Product.insertMany([
+        {
+            name: "placeholder",
+            description: "placeholder",
+            image: "placeholder",
+            price: "placeholder",
+            category: "placeholder"
+        },
+        {
+            name: "placeholder",
+            description: "placeholder",
+            image: "placeholder",
+            price: "placeholder",
+            category: "placeholder"
+        },
+        {
+            name: "placeholder",
+            description: "placeholder",
+            image: "placeholder",
+            price: "placeholder",
+            category: "placeholder"
+        },
+        {
+            name: "placeholder",
+            description: "placeholder",
+            image: "placeholder",
+            price: "placeholder",
+            category: "placeholder"
+        },
+        {
+            name: "placeholder",
+            description: "placeholder",
+            image: "placeholder",
+            price: "placeholder",
+            category: "placeholder"
+        },
+        {
+            name: "placeholder",
+            description: "placeholder",
+            image: "placeholder",
+            price: "placeholder",
+            category: "placeholder"
+        },
+        {
+            name: "placeholder",
+            description: "placeholder",
+            image: "placeholder",
+            price: "placeholder",
+            category: "placeholder"
+        },
+        {
+            name: "placeholder",
+            description: "placeholder",
+            image: "placeholder",
+            price: "placeholder",
+            category: "placeholder"
+        },
+        {
+            name: "placeholder",
+            description: "placeholder",
+            image: "placeholder",
+            price: "placeholder",
+            category: "placeholder"
+        },
+        {
+            name: "placeholder",
+            description: "placeholder",
+            image: "placeholder",
+            price: "placeholder",
+            category: "placeholder"
+        }
+    ]);
+
+    console.log("products seeded");
 })
