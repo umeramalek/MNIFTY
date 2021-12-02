@@ -20,70 +20,91 @@ db.once('open', async () => {
 
     const products = await Product.insertMany([
         {
-            name: "placeholder",
+            name: "Delicate Arch",
             description: "placeholder",
             image: "placeholder",
             price: "placeholder",
             category: "placeholder"
         },
         {
-            name: "placeholder",
+            name: "Banana Cat",
             description: "placeholder",
             image: "placeholder",
             price: "placeholder",
             category: "placeholder"
         },
         {
-            name: "placeholder",
+            name: "Vino Dog",
             description: "placeholder",
             image: "placeholder",
             price: "placeholder",
             category: "placeholder"
         },
         {
-            name: "placeholder",
+            name: "Sam and Bo",
             description: "placeholder",
             image: "placeholder",
             price: "placeholder",
             category: "placeholder"
         },
         {
-            name: "placeholder",
+            name: "Farley",
             description: "placeholder",
             image: "placeholder",
             price: "placeholder",
             category: "placeholder"
         },
         {
-            name: "placeholder",
+            name: "Maya Cat",
             description: "placeholder",
             image: "placeholder",
             price: "placeholder",
             category: "placeholder"
         },
         {
-            name: "placeholder",
+            name: "Catventure",
             description: "placeholder",
             image: "placeholder",
             price: "placeholder",
             category: "placeholder"
         },
         {
-            name: "placeholder",
+            name: "Atlas",
             description: "placeholder",
             image: "placeholder",
             price: "placeholder",
             category: "placeholder"
         },
         {
-            name: "placeholder",
+            name: "Coffee",
             description: "placeholder",
             image: "placeholder",
             price: "placeholder",
             category: "placeholder"
         },
         {
-            name: "placeholder",
+            name: "Bison",
+            description: "placeholder",
+            image: "placeholder",
+            price: "placeholder",
+            category: "placeholder"
+        },
+        {
+            name: "Two Bison",
+            description: "placeholder",
+            image: "placeholder",
+            price: "placeholder",
+            category: "placeholder"
+        },
+        {
+            name: "Cleo",
+            description: "placeholder",
+            image: "placeholder",
+            price: "placeholder",
+            category: "placeholder"
+        },
+        {
+            name: "Weirdo",
             description: "placeholder",
             image: "placeholder",
             price: "placeholder",
