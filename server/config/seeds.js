@@ -120,11 +120,6 @@ db.once('open', async () => {
         lastName: "Faucher",
         email: "mayyfaucher@gmail.com",
         password: "password123",
-        orders: [
-            {
-
-            }
-        ]
     });
 
     await User.create({
@@ -132,11 +127,6 @@ db.once('open', async () => {
         lastName: "Malek",
         email: "umeramalek796@gmail.com",
         password: "password123",
-        orders: [
-            {
-
-            }
-        ]
     });
 
     await User.create({
@@ -144,11 +134,6 @@ db.once('open', async () => {
         lastName: "Yeager",
         email: "wow_d2@hotmail.com",
         password: "password123",
-        orders: [
-            {
-
-            }
-        ]
     });
 
     console.log("users seeded");
