@@ -26,7 +26,7 @@ const userSchema = new Schema({
         required: true,
         minlength: 6
     },
-    orders: [order.schema]
+    orders: [Order.schema]
 })
 
 // This sets up a pre-save middleware to create the password
