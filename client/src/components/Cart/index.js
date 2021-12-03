@@ -16,14 +16,6 @@ const Cart = () => {
   const [state, dispatch] = useStoreContext();
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
-  useEffect(() => {
-    if (data) {
-      stripePromise.then((res) => {
-        //   using session storage to transfer stuff to the checkout
-        res.redirectToCheckout({ sessionId: data.checkout.session });
-      });
-    }
-  }, [data]);
 
   useEffect(() => {
     async function getCart() {
@@ -36,9 +28,14 @@ const Cart = () => {
     }
   }, [state.cart.length, dispatch]);
 
-  function toggleCart() {
-    dispatch({ type: TOGGLE_CART });
-  }
+  useEffect(() => {
+    if (data) {
+      stripePromise.then((res) => {
+        //   using session storage to transfer stuff to the checkout
+        res.redirectToCheckout({ sessionId: data.checkout.session });
+      });
+    }
+  }, [data]);
 
   function calculateTotal() {
     let sum = 0;
@@ -47,6 +44,11 @@ const Cart = () => {
     });
     return sum.toFixed(2);
   }
+  
+  function toggleCart() {
+    dispatch({ type: TOGGLE_CART });
+  }
+
 
   function submitCheckout() {
     const productIds = [];
