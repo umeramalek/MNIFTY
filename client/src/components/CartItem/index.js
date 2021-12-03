@@ -60,13 +60,13 @@ const CartItem = ({ item }) => {
           <div>{item.name}, ${item.price}</div>
           <div>
             <span>Qty:</span>
-            <input
+            {/* <input
               type="number"
               placeholder="1"
             //   commenting out purchase quantity just incase errors spring up
-            //   value={item.purchaseQuantity}
+              value={item.purchaseQuantity}
               onChange={onChange}
-            />
+            /> */}
             <span
               role="img"
               aria-label="trash"
