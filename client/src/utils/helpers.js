@@ -49,6 +49,10 @@ export function idbPromise(storeName, method, object) {
                     console.log("No Valid Method detected");
                     break;
             }
-        }
-    })
+
+            tx.oncomplete = function() {
+                db.close();
+            };
+        };
+    });
 }
