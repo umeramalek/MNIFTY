@@ -30,6 +30,25 @@ export function idbPromise(storeName, method, object) {
             db.onerror = function(e) {
                 console.log("error with", e);
             };
+
+            switch (method) {
+                case "put":
+                    store.put(object);
+                    resolve(object);
+                    break;
+                case "get": 
+                    const all = store.getAll();
+                    all.onsuccess = function() {
+                    resolve(all.result);
+                };
+                    break;
+                case "delete":
+                    store.delete(object._id);
+                    break;
+                default:
+                    console.log("No Valid Method detected");
+                    break;
+            }
         }
     })
 }
