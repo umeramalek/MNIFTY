@@ -78,7 +78,7 @@ function ProductItem(item) {
       <div>
           {/* we don't need quantity for the current complexity of this project */}
         {/* <div>{quantity} {pluralize("item", quantity)} in stock</div> */}
-        <span>${price}</span>
+        <span>{price} MUT Tokens</span>
       </div>
       <button onClick={addToCart}>Add to cart</button>
     </div>
