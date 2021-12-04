@@ -14,7 +14,7 @@ function Nav() {
                         light
                     >
                         <NavbarBrand href="/">
-                            <span role="img" aria-label="shopping bag">🛍️</span>
+                            <span role="img" aria-label="shopping bag"> </span>
                             MNIFTY
                         </NavbarBrand>
                         <NavbarToggler onClick={function noRefCheck() { }} />
