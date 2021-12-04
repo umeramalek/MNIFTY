@@ -67,7 +67,7 @@ function ProductItem(item) {
 
 //   returns the visible elements to be displayed.
   return (
-    <div className="card px-1 py-1">
+    <div className="card px-1 py-1 glassCard">
       <Link to={`/products/${_id}`}>
         <img
           alt={name}

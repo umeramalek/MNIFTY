@@ -16,8 +16,8 @@ const Main = () => {
         <div className = "container">
             {/* PLACE CONTENTS INSIDE HERE */}
             <CategoryMenu />
-      <ProductList />
-      <Cart />
+            <ProductList />
+            <Cart />
         </div>
     )
 }
