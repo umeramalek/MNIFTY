@@ -1,6 +1,6 @@
 import React from "react";
 import Auth from "../../utils/auth";
-import { Navbar, NavbarBrand,NavbarToggler,Collapse,NavItem,NavLink } from 'reactstrap';
+import { Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, NavLink } from 'reactstrap';
 
 function Nav() {
 

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams, } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
+import VanillaTilt from "vanilla-tilt";
+
 // import Cart from  "../components/Cart"; 
 // don't current need Cart but will in the future
 
@@ -90,11 +92,18 @@ function Detail() {
         idbPromise('cart', 'delete', { ...currentProduct });
     };
 
+    VanillaTilt.init(document.querySelector(".solo-card"), {
+        max: 25,
+        speed: 400,
+        glare: true,
+        "max-glare": 1,
+        "glare-prerender": false,
+    });
 
     return (
         <>
           {currentProduct && cart ? (
-            <div className="card px-1 py-1 glassCard">
+            <div className="card px-1 py-1 glassCard solo-card">
               <Link to="/">← Back to Products</Link>
     
               <h2>{currentProduct.name}</h2>
