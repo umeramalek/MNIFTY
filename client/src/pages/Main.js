@@ -13,7 +13,7 @@ import Cart from "../components/Cart";
 
 const Main = () => {
     return (
-        <div className = "container">
+        <div className = "container-fluid">
             {/* PLACE CONTENTS INSIDE HERE */}
             <CategoryMenu />
             <ProductList />

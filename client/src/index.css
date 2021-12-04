@@ -164,13 +164,13 @@ input:focus {
   box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
 }
 
-.container {
+.container-fluid {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  width: 85%;
-  max-width: 100vw;
+  width: 100%;
+  /* max-width: 100vw; */
   /* max-height:96vh; */
   /* margin-left: auto;
   margin-right: auto; */
@@ -178,7 +178,7 @@ input:focus {
   overflow-x: hidden;
   
 }
-.container::-webkit-scrollbar {
+.container-fluid::-webkit-scrollbar {
   display: none;
 }
 
