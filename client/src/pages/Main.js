@@ -7,7 +7,7 @@ import React from "react";
 // Contents to display the List of Products
 import ProductList from "../components/ProductList";
 // Display the category menu
-import Categorymenu from "../components/Categorymenu";
+import CategoryMenu from "../components/Categorymenu";
 // This should have all the cart information on it
 import Cart from "../components/Cart";
 
@@ -15,6 +15,11 @@ const Main = () => {
     return (
         <div className = "container">
             {/* PLACE CONTENTS INSIDE HERE */}
+            <CategoryMenu />
+      <ProductList />
+      <Cart />
         </div>
     )
 }
+
+export default Main;
