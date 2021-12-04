@@ -9,6 +9,7 @@ import { idbPromise } from '../../utils/helpers';
 *** @CategoryMenu returns the menu that displays all the categories
 *** @useEffect displays the categoryData if it has been retrieved
 ***     otherwise it will get the categories again?
+***
 */
 
 
@@ -31,8 +32,10 @@ function CategoryMenu() {
     } else if (!loading) {
       idbPromise('categories', 'get').then((categories) => {
         dispatch({
+
           type: UPDATE_CATEGORIES,
           categories: categories,
+          
         });
       });
     }

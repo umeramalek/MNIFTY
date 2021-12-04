@@ -35,20 +35,21 @@ function ProductItem(item) {
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === _id)
     if (itemInCart) {
-      dispatch({
-        type: UPDATE_CART_QUANTITY,
-        _id: _id,
+    //   dispatch({
+    //     type: UPDATE_CART_QUANTITY,
+    //     _id: _id,
 
-        // Quantity isn't being utilized in this
-        // purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
-      });
-      idbPromise('cart', 'put', {
-        ...itemInCart,
+    //     // Quantity isn't being utilized in this
+    //     // purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+    //   });
+    //   idbPromise('cart', 'put', {
+    //     ...itemInCart,
 
-        // Quantity isn't being utilized in this
-        // purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
-      });
-    } else {
+    //     // Quantity isn't being utilized in this
+    //     // purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+    //   });
+    // } else 
+    // {
       dispatch({
         type: ADD_TO_CART,
         product: { ...item,

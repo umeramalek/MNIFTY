@@ -41,7 +41,7 @@ db.once('open', async () => {
         },
         {
             name: "Sam and Bo",
-            description: "'Sami' and his dog bo",
+            description: "'Sami' and his dog bo JUST VIBING at their place of residence, absolutely kickin' it back",
             image: "sam&bo.png",
             price: 170,
             category: categories[1]._id
@@ -103,7 +103,7 @@ db.once('open', async () => {
             category: categories[0]._id
         },
         {
-            name: "Weirdo",
+            name: "Schturman",
             description: "Cartoonized NFT of a software developer",
             image: "cartoon.png",
             price: 10,
@@ -115,21 +115,19 @@ db.once('open', async () => {
 
     await User.deleteMany();
 
-    await User.create({
+    await User.insertMany({
         firstName: "May",
         lastName: "Faucher",
         email: "mayyfaucher@gmail.com",
         password: "password123"
-    });
-
-    await User.create({
+    },
+    {
         firstName: "Umera",
         lastName: "Malek",
         email: "umeramalek796@gmail.com",
         password: "password123"
-    });
-
-    await User.create({
+    },
+    {
         firstName: "Tyler",
         lastName: "Yeager",
         email: "wow_d2@hotmail.com",

@@ -10,6 +10,7 @@ const NoMatch = () => {
     <div>
       <Jumbotron>
         <h1>404 Page Not Found</h1>
+        <br/>
         <h1>
           Sorry, the page you are looking for is on vacation and won't be back for at least 10-24 business days.
         </h1>
