@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams, } from "react-router-dom";
-import { useQuery } from "apollo@client";
+import { useQuery } from "@apollo/client";
 
 // import Cart from  "../components/Cart"; 
 // don't current need Cart but will in the future
@@ -19,7 +19,7 @@ import {
 import { QUERY_PRODUCTS } from "../utils/queries";
 import { idbPromise } from "../utils/IndexDB";
 
-import loading from "../assets/loading.gif";
+import loadingSpin from "../assets/loading.gif";
 
 function Detail() {
     const [state, dispatch] = useStoreContext();
@@ -89,4 +89,39 @@ function Detail() {
 
         idbPromise('cart', 'delete', { ...currentProduct });
     };
+
+
+    return (
+        <>
+          {currentProduct && cart ? (
+            <div className="container my-1">
+              <Link to="/">← Back to Products</Link>
+    
+              <h2>{currentProduct.name}</h2>
+    
+              <p>{currentProduct.description}</p>
+    
+              <p>
+                <strong>Price:</strong>{currentProduct.price} MUT Tokens {' '}
+                <button onClick={addToCart}>Add to Cart</button>
+                <button
+                  disabled={!cart.find((p) => p._id === currentProduct._id)}
+                  onClick={removeFromCart}
+                >
+                  Remove from Cart
+                </button>
+              </p>
+    
+              <img
+                src={`/images/${currentProduct.image}`}
+                alt={currentProduct.name}
+              />
+            </div>
+          ) : null}
+          {loading ? <img src={loadingSpin} alt="loading" /> : null}
+          {/* <Cart /> */}
+        </>
+      );
 };
+
+export default Detail;
