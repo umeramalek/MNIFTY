@@ -7,6 +7,7 @@ import { Form, Row, Col, FormGroup, Label, Input, Button} from 'reactstrap';
 
 function Signup(props) {
     const [formState, setFormState] = useState({ email: "", password: "" });
+    const [addUser] = useMutation(ADD_USER)
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
