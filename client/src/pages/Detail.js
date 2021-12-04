@@ -4,7 +4,7 @@ import { useQuery } from "@apollo/client";
 
 import VanillaTilt from "vanilla-tilt";
 
-// import Cart from  "../components/Cart"; 
+import Cart from  "../components/Cart"; 
 // don't current need Cart but will in the future
 
 import { useStoreContext } from "../utils/GlobalState";
@@ -129,7 +129,7 @@ function Detail() {
             </div>
           ) : null}
           {loading ? <img src={loadingSpin} alt="loading" /> : null}
-          {/* <Cart /> */}
+          <Cart />
         </>
       );
 };
