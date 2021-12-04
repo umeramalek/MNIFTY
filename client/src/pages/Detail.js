@@ -94,15 +94,20 @@ function Detail() {
     return (
         <>
           {currentProduct && cart ? (
-            <div className="container my-1">
+            <div className="card px-1 py-1 glassCard">
               <Link to="/">← Back to Products</Link>
     
               <h2>{currentProduct.name}</h2>
     
               <p>{currentProduct.description}</p>
     
-              <p>
-                <strong>Price:</strong>{currentProduct.price} MUT Tokens {' '}
+              <img
+                src={`/images/${currentProduct.image}`}
+                alt={currentProduct.name}
+              />
+
+<p>
+                <strong>Price:</strong> {currentProduct.price} MUT Tokens {' '}
                 <button onClick={addToCart}>Add to Cart</button>
                 <button
                   disabled={!cart.find((p) => p._id === currentProduct._id)}
@@ -111,11 +116,7 @@ function Detail() {
                   Remove from Cart
                 </button>
               </p>
-    
-              <img
-                src={`/images/${currentProduct.image}`}
-                alt={currentProduct.name}
-              />
+
             </div>
           ) : null}
           {loading ? <img src={loadingSpin} alt="loading" /> : null}
