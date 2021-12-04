@@ -35,7 +35,7 @@ function Detail() {
         if (products.length) {
             setCurrentProduct(products.find((product) => product._id === id));
         } else if (data) {
-        // if the product doesn't exist in the global store then it will check the server data
+            // if the product doesn't exist in the global store then it will check the server data
             dispatch({
                 type: UPDATE_PRODUCTS,
                 products: data.products,
@@ -45,7 +45,7 @@ function Detail() {
                 idbPromise('products', 'put', product);
             });
         } else if (!loading) {
-        // if it doesn't exist in global store or server then it will pull the caache from indexDB
+            // if it doesn't exist in global store or server then it will pull the caache from indexDB
             idbPromise('products', 'get').then((indexedProducts) => {
                 dispatch({
                     type: UPDATE_PRODUCTS,
@@ -54,4 +54,29 @@ function Detail() {
             });
         }
     }, [products, data, loading, dispatch, id]);
+
+
+    const addToCart = () => {
+        const itemInCart = cart.find((cartItem) => cartItem._id === id);
+        // checks to see if an item matching the item's id currently exists in the car, if it does then it will modify the quanty of that item when added
+        if (itemInCart) {
+            dispatch({
+                type: UPDATE_CART_QUANTITY,
+                _id: id,
+                purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
+            });
+            //uses put to update the cart quantity
+            idbPromise('cart', 'put', {
+                ...itemInCart,
+                purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
+            });
+        } else {
+        //however, if no item matching the id currently exists, then it will be added to the cart and the quantity updated to 1
+            dispatch({
+                type: ADD_TO_CART,
+                product: { ...currentProduct, purchaseQuantity: 1 },
+            });
+            idbPromise('cart', 'put', { ...currentProduct, purchaseQuantity: 1 });
+        }
+    };
 };
