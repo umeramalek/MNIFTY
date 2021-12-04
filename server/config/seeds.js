@@ -23,7 +23,7 @@ db.once('open', async () => {
             description: "A picture of Delicate Arch at Arches National Park",
             image: "delicate-arch.png",
             price: 50,
-            category: categories[5]._id
+            category: categories[4]._id
         },
         {
             name: "Banana Cat",
