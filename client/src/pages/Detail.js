@@ -71,12 +71,22 @@ function Detail() {
                 purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
             });
         } else {
-        //however, if no item matching the id currently exists, then it will be added to the cart and the quantity updated to 1
+            //however, if no item matching the id currently exists, then it will be added to the cart and the quantity updated to 1
             dispatch({
                 type: ADD_TO_CART,
                 product: { ...currentProduct, purchaseQuantity: 1 },
             });
             idbPromise('cart', 'put', { ...currentProduct, purchaseQuantity: 1 });
         }
+    };
+
+    const removeFromCart = () => {
+        // deletes an item from the cart based on product id number
+        dispatch({
+            type: REMOVE_FROM_CART,
+            _id: currentProduct._id,
+        });
+
+        idbPromise('cart', 'delete', { ...currentProduct });
     };
 };
