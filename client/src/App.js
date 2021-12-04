@@ -13,7 +13,7 @@ import { setContext } from '@apollo/client/link/context';
 import Main from './pages/Main';
 // import Login from './pages/Login';
 import Nav from './components/Nav';
-// import Detail from './pages/Detail';
+import Detail from "./pages/Detail";
 // import Signup from './pages/Signup';
 // import Success from './pages/Success';
 import NoMatch from './pages/NoMatch';
@@ -55,8 +55,8 @@ function App() {
               {/* <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/success" component={Success} />
-              <Route exact path="/orderHistory" component={OrderHistory} />
-              <Route exact path="/products/:id" component={Detail} /> */}
+              <Route exact path="/orderHistory" component={OrderHistory} /> */}
+              <Route exact path="/products/:id" component={Detail} />
               <Route component={NoMatch} />
             </Switch>
           </StoreProvider>
