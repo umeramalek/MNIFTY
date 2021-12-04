@@ -29,3 +29,54 @@ function Login(props) {
             [name]: value,
         });
     };
+
+    return (
+        <div className="container my-1">
+            <Link to="/signup"> Sign Up </Link>
+
+            <h2>Login</h2>
+
+            <Form inline onSubmit={handleFormSubmit}>
+                <FormGroup floating>
+                    <Input
+                        id="exampleEmail"
+                        name="email"
+                        placeholder="Email"
+                        type="email"
+                        onChange={handleChange}
+                    />
+                    <Label for="exampleEmail">
+                        Email
+                    </Label>
+                </FormGroup>
+                {' '}
+                <FormGroup floating>
+                    <Input
+                        id="examplePassword"
+                        name="password"
+                        placeholder="Password"
+                        type="password"
+                        onChange={handleChange}
+                    />
+                    <Label for="examplePassword">
+                        Password
+                    </Label>
+                </FormGroup>
+                {' '}
+                {error ? (
+                    <div>
+                        <p className="error-text">The provided credentials are incorrect</p>
+                    </div>
+                ) : null}
+                <Button>
+                    Submit
+                </Button>
+            </Form>
+        </div>
+
+
+    )
+
+}
+
+export default Login;
