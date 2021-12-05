@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import Auth from "../../utils/auth";
 import { Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, NavLink } from 'reactstrap';
 
@@ -24,14 +25,14 @@ function Nav() {
                                 navbar
                             >
                                 <NavItem>
-                                    <NavLink to="/orderHistory">
+                                    <Link to="/orderHistory">
                                     Order History
-                                    </NavLink>
+                                    </Link>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink href="/" onClick={() => Auth.logout()}>
+                                    <Link href="/" onClick={() => Auth.logout()}>
                                         Logout
-                                    </NavLink>
+                                    </Link>
                                 </NavItem>
                             </Nav>
                         </Collapse>
@@ -42,14 +43,14 @@ function Nav() {
             return(
                 <Navbar>
                     <NavItem>
-                        <NavLink to="/signup">
+                        <Link to="/signup">
                         Signup
-                        </NavLink>
+                        </Link>
                     </NavItem>
                     <NavItem>
-                        <NavLink to="/login">
+                        <Link to="/login">
                         Login
-                        </NavLink>
+                        </Link>
                     </NavItem>
                 </Navbar>       
                 )
