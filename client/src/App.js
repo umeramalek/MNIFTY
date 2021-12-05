@@ -15,7 +15,7 @@ import Login from './pages/Login';
 import Nav from './components/Nav';
 import Detail from "./pages/Detail";
 
-// import Signup from './pages/Signup';
+import Signup from './pages/Signup';
 import Success from './pages/Success';
 
 import NoMatch from './pages/NoMatch';
