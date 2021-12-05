@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/client';
 import { useStoreContext } from '../../utils/GlobalState';
 import { UPDATE_CATEGORIES, UPDATE_CURRENT_CATEGORY } from '../../utils/actions';
 import { QUERY_CATEGORIES } from '../../utils/queries';
-import { idbPromise } from '../../utils/helpers';
+// import { idbPromise } from '../../utils/helpers';
 
 /*
 *** @CategoryMenu returns the menu that displays all the categories
@@ -30,14 +30,14 @@ function CategoryMenu() {
         // idbPromise('categories', 'put', category);
       });
     } else if (!loading) {
-      idbPromise('categories', 'get').then((categories) => {
-        dispatch({
+      // idbPromise('categories', 'get').then((categories) => {
+      //   dispatch({
 
-          type: UPDATE_CATEGORIES,
-          categories: categories,
+      //     type: UPDATE_CATEGORIES,
+      //     categories: categories,
           
-        });
-      });
+      //   });
+      // });
     }
   }, [categoryData, loading, dispatch]);
 
