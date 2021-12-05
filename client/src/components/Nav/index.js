@@ -9,12 +9,12 @@ function Nav() {
             return (
                 <div>
                     <Navbar
-                        color="light"
+                        color="danger"
                         expand="md"
                         light
                     >
                         <NavbarBrand href="/">
-                            <span role="img" aria-label="shopping bag">🛍️</span>
+                            <span role="img" aria-label="shopping bag"></span>
                             MNIFTY
                         </NavbarBrand>
                         <NavbarToggler onClick={function noRefCheck() { }} />
