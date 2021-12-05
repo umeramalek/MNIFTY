@@ -22,10 +22,10 @@ const resolvers = {
         }
         return await Product.find(params).populate('category');
     },
-    product: async (parent, { _id }) => {
+      product: async (parent, { _id }) => {
       return await Product.findById(_id).populate('category');
     },
-    user: async (parent, args, context) => {
+      user: async (parent, args, context) => {
         if (context.user) {
           const user = await User.findById(context.user._id).populate({
             path: 'orders.products',

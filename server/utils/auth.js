@@ -1,21 +1,23 @@
 const jwt = require('jsonwebtoken');
 
 // set token secret and expiration date
-const secret = 'SuperSpecialSecretCodeMagenta';
+const secret = 'mysecretsshhhhh';
 const expiration = '2h';
 
 module.exports = {
   
   authMiddleware: function ({req}) {
     // allows token to be sent via  req.query or headers
+    console.log(req.headers.authorization);
     let token = req.body.token || req.headers.authorization || req.query.token;
-
+    console.log(token);
     // ["Bearer", "<tokenvalue>"]
     if (req.headers.authorization) {
       token = token.split(' ').pop().trim();
     }
 
     if (!token) {
+      console.log("token doesn't exist");
       return req;
     }
 
@@ -30,8 +32,8 @@ module.exports = {
 
     return req;
   },
-  signToken: function ({ username, email, _id }) {
-    const payload = { username, email, _id };
+  signToken: function ({ firstName, lastName, email, _id }) {
+    const payload = { firstName, lastName, email, _id };
 
     return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
   },
