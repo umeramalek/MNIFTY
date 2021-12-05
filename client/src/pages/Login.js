@@ -36,7 +36,7 @@ function Login(props) {
 
             <h2>Login</h2>
 
-            <Form inline onSubmit={handleFormSubmit}>
+            <Form onSubmit={handleFormSubmit}>
                 <FormGroup floating>
                     <Input
                         id="exampleEmail"
