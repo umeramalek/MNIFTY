@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import Auth from "../../utils/auth";
+// import Cart from "../../components/cart";
 import { Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, NavLink } from 'reactstrap';
 
 function Nav() {
@@ -36,6 +37,7 @@ function Nav() {
                                 </NavItem>
                             </Nav>
                         </Collapse>
+                        {/* <Cart /> */}
                     </Navbar>
                 </div>
             );
