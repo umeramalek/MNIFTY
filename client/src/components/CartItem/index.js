@@ -57,9 +57,9 @@ const CartItem = ({ item }) => {
           />
         </div>
         <div>
-          <div>{item.name}, ${item.price}</div>
+          <div>{item.name}: {item.price} MUT</div>
           <div>
-            <span>Qty:</span>
+            {/* <span>Qty:</span> */}
             {/* <input
               type="number"
               placeholder="1"
@@ -72,7 +72,7 @@ const CartItem = ({ item }) => {
               aria-label="trash"
               onClick={() => removeFromCart(item)}
             >
-              🗑️
+              REMOVE 🗑️
             </span>
           </div>
         </div>
