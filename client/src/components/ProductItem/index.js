@@ -7,7 +7,7 @@ import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 
 // importing indexDB as idbPromise to manage cart storage
-import { idbPromise } from "../../utils/helpers";
+import { idbPromise } from "../../utils/IndexDB";
 
 
 /*
@@ -54,13 +54,13 @@ function ProductItem(item) {
         type: ADD_TO_CART,
         product: { ...item,
             // Quantity isn't being utilized in this
-            //  purchaseQuantity: 1
+            //  purchaseQuantity: 1 
              }
       });
-      idbPromise('cart', 'put', { ...item, 
+      idbPromise('cart', 'put', { ...item });
         // quantity isn't being utilized in this
         // purchaseQuantity: 1 
-    });
+    
     }
   }
 
