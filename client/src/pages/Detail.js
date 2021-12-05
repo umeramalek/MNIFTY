@@ -117,7 +117,7 @@ function Detail() {
 
 <p>
                 <strong>Price:</strong> {currentProduct.price} MUT Tokens {' '}
-                <button onClick={addToCart}>Add to Cart</button>
+                <button onClick={addToCart}>+ ADD TO CART</button>
                 <button
                   disabled={!cart.find((p) => p._id === currentProduct._id)}
                   onClick={removeFromCart}

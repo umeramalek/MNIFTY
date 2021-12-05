@@ -14,10 +14,12 @@ import Cart from "../components/Cart";
 const Main = () => {
     return (
         <div className = "container-fluid">
-            {/* PLACE CONTENTS INSIDE HERE */}
+            {/* This is the whole page except the navbar */}
+
+            <Cart />
             <CategoryMenu />
             <ProductList />
-            <Cart />
+            
         </div>
     )
 }
