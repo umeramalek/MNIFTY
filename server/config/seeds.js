@@ -134,6 +134,27 @@ db.once('open', async () => {
         password: "password123"
     });
 
+    // await User.create({
+    //     firstName: "May",
+    //     lastName: "Faucher",
+    //     email: "mayyfaucher@gmail.com",
+    //     password: "password123"
+    // }),
+
+    // await User.create({
+    //     firstName: "Umera",
+    //     lastName: "Malek",
+    //     email: "umeramalek796@gmail.com",
+    //     password: "password123"
+    // }),
+
+    // await User.create({
+    //     firstName: "Tyler",
+    //     lastName: "Yeager",
+    //     email: "wow_d2@hotmail.com",
+    //     password: "password123"
+    // });
+
     console.log("users seeded");
 
     process.exit();
