@@ -11,6 +11,7 @@ function Login(props) {
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
+        console.log("logged in");
         try {
             const mutationResponse = await login({
                 variables: { email: formState.email, password: formState.password },
@@ -18,7 +19,8 @@ function Login(props) {
             const token = mutationResponse.data.login.token;
             Auth.login(token);
         } catch (err) {
-            console.log(error)
+            console.log("error");
+            console.error(err);
         }
     }
 
@@ -39,26 +41,26 @@ function Login(props) {
             <Form inline onSubmit={handleFormSubmit}>
                 <FormGroup floating>
                     <Input
-                        id="exampleEmail"
+                        id="email"
                         name="email"
                         placeholder="Email"
                         type="email"
                         onChange={handleChange}
                     />
-                    <Label for="exampleEmail">
+                    <Label for="email">
                         Email
                     </Label>
                 </FormGroup>
                 {' '}
                 <FormGroup floating>
                     <Input
-                        id="examplePassword"
+                        id="password"
                         name="password"
                         placeholder="Password"
                         type="password"
                         onChange={handleChange}
                     />
-                    <Label for="examplePassword">
+                    <Label for="password">
                         Password
                     </Label>
                 </FormGroup>
@@ -68,7 +70,7 @@ function Login(props) {
                         <p className="error-text">The provided credentials are incorrect</p>
                     </div>
                 ) : null}
-                <Button>
+                <Button type="submit">
                     Submit
                 </Button>
             </Form>

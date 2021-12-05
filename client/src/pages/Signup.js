@@ -11,6 +11,8 @@ function Signup(props) {
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
+        // console.log(event.target.password.value);
+        // console.log("form submitted");
         const mutationResponse = await addUser({
             variables: {
                 email: formState.email,
@@ -41,11 +43,11 @@ function Signup(props) {
                 <Row form>
                 <Col md={6}>
                         <FormGroup>
-                            <Label for="examplefirstName">
+                            <Label for="firstName">
                                 First Name
                             </Label>
                             <Input
-                                id="examplefirstName"
+                                id="firstName"
                                 name="firstName"
                                 placeholder="First Name"
                                 type="firstName"
@@ -55,11 +57,11 @@ function Signup(props) {
                     </Col>
                     <Col md={6}>
                         <FormGroup>
-                            <Label for="examplelastName">
+                            <Label for="lastName">
                                 Last Name
                             </Label>
                             <Input
-                                id="examplelastName"
+                                id="lastName"
                                 name="lastName"
                                 placeholder="Last Name"
                                 type="lastName"
@@ -69,13 +71,13 @@ function Signup(props) {
                     </Col>
                     <Col md={6}>
                         <FormGroup>
-                            <Label for="exampleEmail">
+                            <Label for="email">
                                 Email
                             </Label>
                             <Input
-                                id="exampleEmail"
+                                id="email"
                                 name="email"
-                                placeholder="with a placeholder"
+                                placeholder="Email"
                                 type="email"
                                 onChange={handleChange}
                             />
@@ -83,13 +85,13 @@ function Signup(props) {
                     </Col>
                     <Col md={6}>
                         <FormGroup>
-                            <Label for="examplePassword">
+                            <Label for="password">
                                 Password
                             </Label>
                             <Input
-                                id="examplePassword"
+                                id="password"
                                 name="password"
-                                placeholder="password placeholder"
+                                placeholder="Password"
                                 type="password"
                                 onChange={handleChange}
                             />
@@ -97,7 +99,7 @@ function Signup(props) {
                     </Col>
                 </Row>
                 
-                <Button>
+                <Button type="submit">
                     Sign up
                 </Button>
             </Form>
