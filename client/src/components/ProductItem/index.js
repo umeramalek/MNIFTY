@@ -14,8 +14,6 @@ import { idbPromise } from "../../utils/IndexDB";
 *** ProductItem defines the attributes of item through deconstruction
 ***     as well as deconstructs store context,
 ***     it then contains a function and returns the 'HTML'
-*** @addToCart does two things: it adds to cart and it updates an item through
-***     the update quantity button.
 */
 
 function ProductItem(item) {
@@ -26,8 +24,6 @@ function ProductItem(item) {
     name,
     _id,
     price,
-    // Once again, quantity isn't necessary
-    // quantity
   } = item;
 
   const { cart } = state
@@ -38,34 +34,24 @@ function ProductItem(item) {
       dispatch({
         type: UPDATE_CART_QUANTITY,
         _id: _id,
-
-        // Quantity isn't being utilized in this
-        // purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
       });
       idbPromise('cart', 'put', {
-        ...itemInCart,
-
-        // Quantity isn't being utilized in this
-        // purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+        ...itemInCart
       });
     } else 
     {
       dispatch({
         type: ADD_TO_CART,
-        product: { ...item,
-            // Quantity isn't being utilized in this
-            //  purchaseQuantity: 1 
-             }
+        product: { ...item,}
       });
       idbPromise('cart', 'put', { ...item });
-        // quantity isn't being utilized in this
-        // purchaseQuantity: 1 
     
     }
   }
 
 
 //   returns the visible elements to be displayed.
+// How can I hid the add to cart button when the item is added?
   return (
     <div className="card px-1 py-1 glassCard">
       <Link to={`/products/${_id}`}>
@@ -76,11 +62,11 @@ function ProductItem(item) {
         <p>{name}</p>
       </Link>
       <div>
-          {/* we don't need quantity for the current complexity of this project */}
-        {/* <div>{quantity} {pluralize("item", quantity)} in stock</div> */}
         <span>{price} MUT Tokens</span>
       </div>
-      <button onClick={addToCart}>+ ADD TO CART</button>
+      <button 
+      className="itemButton"
+      onClick={addToCart}>+ ADD TO CART</button>
     </div>
   );
 }

@@ -73,7 +73,7 @@ function Detail() {
                 purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
             });
         } else {
-            //however, if no item matching the id currently exists, then it will be added to the cart and the quantity updated to 1
+            //however, if no item matching the id currently exists, then it will be added to the cart and set the quantity to 1
             dispatch({
                 type: ADD_TO_CART,
                 product: { ...currentProduct, purchaseQuantity: 1 },
@@ -100,6 +100,7 @@ function Detail() {
             "glare-prerender": false,
         });
 
+        
         return (
             <>
                 {currentProduct && cart ? (
@@ -113,7 +114,11 @@ function Detail() {
                         />
                         <p>
                             <strong>Price:</strong> {currentProduct.price} MUT Tokens {' '}
-                            <button onClick={addToCart}>+ ADD TO CART</button>
+                            <button 
+
+                            disabled={cart.find((p) => p._id === currentProduct._id)}
+                            onClick={addToCart}>+ ADD TO CART</button>
+                            
                             <button
                                 disabled={!cart.find((p) => p._id === currentProduct._id)}
                                 onClick={removeFromCart}>
