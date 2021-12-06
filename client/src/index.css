@@ -46,12 +46,6 @@ background-size: cover;
   margin:20px;
   /* backdrop-filter:opacity(100%); */
 }
-.glassCard > * {
-  opacity: 200%;
-  /* fill-opacity: 50%; */
-  /* z-index: 2; */
-
-}
 
 
 
