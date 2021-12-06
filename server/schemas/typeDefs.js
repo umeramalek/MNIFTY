@@ -56,5 +56,5 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
   }
 `;
-
+// i'm keeping quantity in there for possible future expansion
 module.exports = typeDefs;
