@@ -20,7 +20,7 @@ class AuthService {
             const decoded = decode(token);
             console.log(token)
             console.log(Date.now() / 1000, decoded.exp)
-            if (decoded.exp > Date.now() / 1000) {
+            if (decoded.exp < Date.now() / 1000) {
                 console.log("this is returning true")
                 return true;
             } else console.log("this is returning false"); return false;
