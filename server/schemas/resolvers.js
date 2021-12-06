@@ -131,7 +131,8 @@ const resolvers = {
         }
   
         const token = signToken(user);
-  
+         console.log("well it made it this far")
+         console.log({token, user})
         return { token, user };
       }
     }
