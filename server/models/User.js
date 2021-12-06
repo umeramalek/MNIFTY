@@ -32,14 +32,14 @@ const userSchema = new Schema({
 // This sets up a pre-save middleware to create the password
 userSchema.pre('save', async function(next) {
     if (this.isNew || this.isModified('password')) {
-        const saltRounds = 69;
+        const saltRounds = 9;
         this.password = await bcrypt.hash(this.password, saltRounds);
     }
     next();
 })
 
 // This checks and compares the incoming password with the currently hashed password
-userSchema.methods.isCorrectpassword = async function(password) {
+userSchema.methods.isCorrectPassword = async function(password) {
     return await bcrypt.compare(password, this.password);
 };
 
