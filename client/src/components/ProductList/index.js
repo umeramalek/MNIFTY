@@ -72,10 +72,6 @@ function ProductList() {
               image={product.image}
               name={product.name}
               price={product.price}
-
-            //   quantity has been removed, so displaying it is un-necessary
-            //      Otherwise, I think it would be necessary though.
-            //   quantity={product.quantity}
             />
           ))}
         </div>
