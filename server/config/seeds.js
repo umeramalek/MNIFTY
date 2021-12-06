@@ -21,91 +21,91 @@ db.once('open', async () => {
         {
             name: "Delicate Arch",
             description: "A picture of Delicate Arch at Arches National Park",
-            image: "https://imgur.com/pms2HOc.png",
+            image: "delicate-arch.png",
             price: 50,
             category: categories[4]._id
         },
         {
             name: "Banana Cat",
             description: "A cat in a banana bed",
-            image: "https://imgur.com/R112jGs.png",
+            image: "banana-cat1.png",
             price: 40,
             category: categories[0]._id
         },
         {
             name: "Vino Dog",
             description: "A sweet dog named Vino",
-            image: "https://imgur.com/saFBZme.png",
+            image: "vino.png",
             price: 60,
             category: categories[1]._id
         },
         {
             name: "Sam and Bo",
             description: "'Sami' and his dog bo JUST VIBING at their place of residence, absolutely kickin' it back",
-            image: "https://imgur.com/ZgUkANm.png",
+            image: "sam&bo.png",
             price: 170,
             category: categories[1]._id
         },
         {
             name: "Farley",
             description: "The one and only, Farley",
-            image: "https://imgur.com/ktdbq6w.png",
+            image: "farley.png",
             price: 1000,
             category: categories[0]._id
         },
         {
             name: "Maya Cat",
             description: "Emily's cat Maya",
-            image: "https://imgur.com/0Frc6Vn.png",
+            image: "maya.png",
             price: 100,
             category: categories[0]._id
         },
         {
             name: "Catventure",
             description: "placeholder",
-            image: "https://imgur.com/Ne4TEpU.png",
+            image: "catventure1.png",
             price: 180,
             category: categories[0]._id
         },
         {
             name: "Atlas",
             description: "A specially minted NFT for Catventure",
-            image: "https://imgur.com/vApXLGi.png",
+            image: "atlas.png",
             price: 120,
             category: categories[0]._id
         },
         {
             name: "Coffee",
             description: "Cafe' Mocha",
-            image: "https://imgur.com/oP4wNRj.png",
+            image: "coffee.png",
             price: 90,
             category: categories[2]._id
         },
         {
             name: "Bison",
             description: "Lone Bison at Yellowstone National Park",
-            image: "https://imgur.com/ASbrHGD.png",
+            image: "bison1.png",
             price: 70,
             category: categories[3]._id
         },
         {
             name: "Two Bison",
             description: "Two Bison at Yellowstone National Park",
-            image: "https://imgur.com/sleK1G2.png",
+            image: "bison.png",
             price: 75,
             category: categories[3]._id
         },
         {
             name: "Cleo",
             description: "Furry predator named Cleopatra",
-            image: "https://imgur.com/dIQCakf.png",
+            image: "cleo.png",
             price: 120,
             category: categories[0]._id
         },
         {
             name: "Schturman",
             description: "Cartoonized NFT of a software developer",
-            image: "https://imgur.com/ndUOP1P.png",
+            image: "cartoon.png",
             price: 10,
             category: categories[5]._id
         }
