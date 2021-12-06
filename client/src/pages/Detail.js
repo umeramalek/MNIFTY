@@ -100,6 +100,7 @@ function Detail() {
             "glare-prerender": false,
         });
 
+        
         return (
             <>
                 {currentProduct && cart ? (
@@ -113,7 +114,11 @@ function Detail() {
                         />
                         <p>
                             <strong>Price:</strong> {currentProduct.price} MUT Tokens {' '}
-                            <button onClick={addToCart}>+ ADD TO CART</button>
+                            <button 
+
+                            disabled={cart.find((p) => p._id === currentProduct._id)}
+                            onClick={addToCart}>+ ADD TO CART</button>
+                            
                             <button
                                 disabled={!cart.find((p) => p._id === currentProduct._id)}
                                 onClick={removeFromCart}>

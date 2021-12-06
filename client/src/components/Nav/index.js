@@ -17,7 +17,7 @@ function Nav() {
                 </h4>
                 <h4 className="mx-1">
                   {/* this is not using the Link component to logout or user and then refresh the application to the start */}
-                  <a href="/" onClick={() => Auth.logout()}>
+                  <a className="links-nav" href="/" onClick={() => Auth.logout()}>
                       Logout
                   </a>
                 </h4>
@@ -43,7 +43,7 @@ function Nav() {
     return(
         <header className="flex-row px-1 navbar ">
         <h1>
-          <Link to="/" className="links-nav">
+          <Link to="/" className="links-nav mayMainNav">
             MNIFTY
           </Link>
         </h1>
