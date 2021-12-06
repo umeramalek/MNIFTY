@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import Auth from "../../utils/auth";
+import './style.css'
 // import Cart from "../../components/cart";
 
 function Nav() {
@@ -8,9 +9,9 @@ function Nav() {
     function showNavigation() {
         if (Auth.loggedIn()) {
             return (
-                <div className="flex-row">
+                <div className="flex-row navbar menu-nav">
                 <h4 className="mx-1">
-                  <Link to="/orderHistory">
+                  <Link to="/orderHistory" className="links-nav">
                       Purchase History
                   </Link>
                 </h4>
@@ -24,14 +25,14 @@ function Nav() {
             );
         } else {
             return(
-                <ul className="flex-row">
+                <ul className="flex-row  menu-nav ">
                 <li className="mx-1">
-                  <Link to="/signup">
+                  <Link to="/signup" className="links-nav">
                     Signup
                   </Link>
                 </li>
                 <li className="mx-1">
-                  <Link to="/login">
+                  <Link to="/login" className="links-nav">
                     Login
                   </Link>
                 </li>
@@ -40,13 +41,13 @@ function Nav() {
         }
     }
     return(
-        <header className="flex-row px-1">
+        <header className="flex-row px-1 navbar ">
         <h1>
-          <Link to="/">
+          <Link to="/" className="links-nav">
             MNIFTY
           </Link>
         </h1>
-  
+      
         <nav>
           {showNavigation()}
         </nav>
