@@ -24,6 +24,6 @@
     "nodemon": "^2.0.2"
   },
   "optionalDependencies": {
-    "fsevents": "~2.3.2"
+    "fsevents": "^2.3.2"
   }
 }
