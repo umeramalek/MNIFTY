@@ -218,6 +218,7 @@
  * [react-router-dom](https://www.npmjs.com/package/react-router-dom)
  * [react-scripts](https://www.npmjs.com/package/react-scripts)
  * [web-vitals](https://www.npmjs.com/package/web-vitals)
+ * [reactstrap](https://www.npmjs.com/package/reactstrap)
 
   ## Deployed Link
 
