@@ -50,6 +50,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
+          {/* redux store */}
           <StoreProvider>
             <Nav />
             <Switch>

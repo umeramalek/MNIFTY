@@ -31,7 +31,7 @@ const Cart = () => {
   useEffect(() => {
     if (data) {
       stripePromise.then((res) => {
-        //   using session storage to transfer stuff to the checkout
+        //  creating a checkout session if data is valid
         res.redirectToCheckout({ sessionId: data.checkout.session });
       });
     }
@@ -99,9 +99,6 @@ const Cart = () => {
         </div>
       ) : (
         <h3>
-          {/* <span role="img" aria-label="shocked">
-            😱
-          </span> */}
           Your cart is empty.
         </h3>
       )}

@@ -20,7 +20,7 @@ db.once('open', async () => {
     const products = await Product.insertMany([
         {
             name: "Delicate Arch",
-            description: "A picture of Delicate Arch at Arches National Park",
+            description: "A picture of Delicate Arch at Arches National Park, just sittin' there... menacingly.",
             image: "delicate-arch.png",
             price: 50,
             category: categories[4]._id
@@ -62,35 +62,35 @@ db.once('open', async () => {
         },
         {
             name: "Catventure",
-            description: "placeholder",
+            description: "A specially minted NFT for Catventure.",
             image: "catventure1.png",
             price: 180,
             category: categories[0]._id
         },
         {
             name: "Atlas",
-            description: "A specially minted NFT for Catventure",
+            description: "meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow",
             image: "atlas.png",
             price: 120,
             category: categories[0]._id
         },
         {
             name: "Coffee",
-            description: "Cafe' Mocha",
+            description: "MMmmmmmm, Cafe' Mocha",
             image: "coffee.png",
             price: 90,
             category: categories[2]._id
         },
         {
             name: "Bison",
-            description: "Lone Bison at Yellowstone National Park",
+            description: "Lone Bison at Yellowstone National Park, vibing.",
             image: "bison1.png",
             price: 70,
             category: categories[3]._id
         },
         {
             name: "Two Bison",
-            description: "Two Bison at Yellowstone National Park",
+            description: "Two Bison at Yellowstone National Park, both vibing.",
             image: "bison.png",
             price: 75,
             category: categories[3]._id
@@ -118,7 +118,7 @@ db.once('open', async () => {
     await User.insertMany({
         firstName: "May",
         lastName: "Faucher",
-        email: "mayyfaucher@gmail.com",
+        email: "mayy@gmail.com",
         password: "password123"
     },
     {
@@ -133,27 +133,6 @@ db.once('open', async () => {
         email: "wow_d2@hotmail.com",
         password: "password123"
     });
-
-    // await User.create({
-    //     firstName: "May",
-    //     lastName: "Faucher",
-    //     email: "mayyfaucher@gmail.com",
-    //     password: "password123"
-    // }),
-
-    // await User.create({
-    //     firstName: "Umera",
-    //     lastName: "Malek",
-    //     email: "umeramalek796@gmail.com",
-    //     password: "password123"
-    // }),
-
-    // await User.create({
-    //     firstName: "Tyler",
-    //     lastName: "Yeager",
-    //     email: "wow_d2@hotmail.com",
-    //     password: "password123"
-    // });
 
     console.log("users seeded");
 
