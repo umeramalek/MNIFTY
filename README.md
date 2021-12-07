@@ -16,7 +16,8 @@
 
   ## Code Snippets
   Here are some code snippets and what they accomplished. This first snippet is found within index.css and is resposible for the main styling for  the product cards. This "glassmorphism" as it is called creates an almost glasslike appearance the looks clean and refined. 
- ```
+
+ ```css
   .glassCard{
     background-color: rgba(255, 255, 255, 0.1);
     /* fill-opacity: 50%; */
@@ -36,7 +37,7 @@
  ```
 
   This second snippet is found within Detail.js. Vanilla Tilt is a library forked from Tilt.js that works in tandem with the glass styling of the cards. When viewing a singular card, this allows for the card to tilt with the user's cursor or gyroscopic enabled smartphone. It also creates a glare effect as if reflecting off of actual glass. 
- ```
+ ```jsx
     import VanillaTilt from "vanilla-tilt";
 
     VanillaTilt.init(document.querySelector(".solo-card"), {
@@ -64,7 +65,8 @@
  ```
 
   The third snippet is found within server/utils/auth.js. This middleware function is responsible for the creation of a json web token (jwt) when a user creates an account and/or logs into an existing account. 
- ```
+
+ ```jsx
     module.exports = {
     authMiddleware: function ({ req }) {
         // allows token to be sent via req.body, req.query, or headers
@@ -100,7 +102,8 @@
  ```
 
   The fourth snippet is found within client/components/nav/index.js. This snippet performs an authentication check using client side auth functions that check the previously created jwt. If the token is valid (not expired) then it will register that the user is logged in and render a navbar with a logout option and past purchase history. If a valid token does not exist, then the navbar will render with sign up and log in options instead. 
- ```
+
+ ```javascript
  function showNavigation() {
         if (Auth.loggedIn()) {
             return (
@@ -151,7 +154,8 @@
  ```
 
   The fifth snippet is found within client/components/productList/index.js. This JSX snippet uses product information imported from a productItem component in order to render the full list of NFT's presented on the home page. 
- ```
+
+ ```javascript
  return (
     <div className="my-2">
       {/* <h2>Our Products:</h2> */}
@@ -188,7 +192,7 @@
 
  Lastly, 
  ```
-  Type 'ls' into your Gitbash or Terminal to see a list of items within the directory. If you have done the previous steps correctly then you should see a respository titled "mnifty". Simply type in "code ." to open it in your code editor of choice. Lastly, check the package.json file  to see the dependencies needed to run this. WIthin your terminal run an npm install.
+  Type 'ls' into your Gitbash or Terminal to see a list of items within the directory. If you have done the previous steps correctly then you should see a respository titled "mnifty". Simply type in the shortcut to open it in your code editor of choice. Lastly, check the package.json file  to see the dependencies needed to run this. WIthin your terminal run: npm install.
  ```
 
   ## Usage
