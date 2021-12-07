@@ -25,9 +25,7 @@ import loadSymbol from '../../assets/loading.gif';
 
 function ProductList() {
   const [state, dispatch] = useStoreContext();
-
   const { currentCategory } = state;
-
   const { loading, data } = useQuery(QUERY_PRODUCTS);
 
   useEffect(() => {
@@ -36,16 +34,8 @@ function ProductList() {
         type: UPDATE_PRODUCTS,
         products: data.products,
       });
-      // data.products.forEach((product) => {
-      //   idbPromise('products', 'put', product);
-      // });
+
     } else if (!loading) {
-      // idbPromise('products', 'get').then((products) => {
-      //   dispatch({
-      //     type: UPDATE_PRODUCTS,
-      //     products: products,
-      //   });
-      // });
       console.log("loading")
     }
   }, [data, loading, dispatch]);
@@ -84,3 +74,5 @@ function ProductList() {
 }
 
 export default ProductList;
+
+

@@ -32,8 +32,8 @@ function Success() {
   return (
     <div>
       <Jumbotron>
-        <h1>Thank you for your purchase!</h1>
-        <h2>You will now be redirected to the home page</h2>
+        <h1>Thanks for buying!</h1>
+        <h2>You can view what was purchased in Order History.</h2>
       </Jumbotron>
     </div>
   );

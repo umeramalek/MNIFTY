@@ -1,11 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-// commented out, not necessary
-// import { pluralize } from "../../utils/helpers"
 import { useStoreContext } from "../../utils/GlobalState";
-import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
-
+import { ADD_TO_CART } from "../../utils/actions";
 // importing indexDB as idbPromise to manage cart storage
 import { idbPromise } from "../../utils/IndexDB";
 
@@ -25,19 +21,11 @@ function ProductItem(item) {
     _id,
     price,
   } = item;
-
   const { cart } = state
-
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === _id)
     if (itemInCart) {
-      dispatch({
-        type: UPDATE_CART_QUANTITY,
-        _id: _id,
-      });
-      idbPromise('cart', 'put', {
-        ...itemInCart
-      });
+      return;
     } else 
     {
       dispatch({
@@ -45,13 +33,11 @@ function ProductItem(item) {
         product: { ...item,}
       });
       idbPromise('cart', 'put', { ...item });
-    
     }
   }
 
-
 //   returns the visible elements to be displayed.
-// How can I hid the add to cart button when the item is added?
+// Can I hide the add to cart button when the item is added?
   return (
     <div className="card px-1 py-1 glassCard">
       <Link to={`/products/${_id}`}>

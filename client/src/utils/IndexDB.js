@@ -1,14 +1,6 @@
-
-// Change product item and categories display method
-
-
 export function idbPromise(storeName, method, item) {
     return new Promise((resolve, reject) => {
-
         const request = window.indexedDB.open("Mnifty", 1);
-        // pre-declaring variables that'll be used in nested functions.
-        // let db, tx, store;
-
         request.onupgradeneeded = function (e) {
             // a console log for redundancy
             console.log("this is the update")
@@ -23,7 +15,7 @@ export function idbPromise(storeName, method, item) {
             */
             const cart = db.createObjectStore("cart", { keyPath: "_id" });
             /*
-            *** @createIndex: This is establishing the index that we will reference later
+            *** @createIndex: This is establishing the index that we will reference later but it's also literally not being used...
             ***     The first string can be called to retrieve everything with the same characters; the unique or not unique item name
             ***     The second string is what it's stored in the database under; the column name, where the item name is a child of that column.
             */
