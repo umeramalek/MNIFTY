@@ -1,4 +1,5 @@
 # MNIFTY
+  ![snapshot1](https://raw.githubusercontent.com/umeramalek/MNIFTY/main/client/public/images/snapshot1.png)
 # Table of Contents
   * [Description](#description)
   * [Installation](#installation)
@@ -11,6 +12,7 @@
   ## Description  
   An NFT E-commerce site. View self created and seeded "nft's" that are priced for our "MUT Tokens".
 
+  ![vanilla-tilt](https://github.com/umeramalek/MNIFTY/blob/main/client/public/images/vanilla-tilt.gif)
 
   ## Code Snippets
   Here are some code snippets and what they accomplished. This first snippet is found within index.css and is resposible for the main styling for  the product cards. This "glassmorphism" as it is called creates an almost glasslike appearance the looks clean and refined. 
