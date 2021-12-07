@@ -2,6 +2,7 @@ import { useReducer } from 'react';
 import {
   UPDATE_PRODUCTS,
   ADD_TO_CART,
+  UPDATE_CART_QUANTITY,
   REMOVE_FROM_CART,
   ADD_MULTIPLE_TO_CART,
   UPDATE_CATEGORIES,
@@ -29,6 +30,17 @@ export const reducer = (state, action) => {
         return {
           ...state,
           cart: [...state.cart, ...action.products],
+        };
+      case UPDATE_CART_QUANTITY:
+        return {
+          ...state,
+          cartOpen: true,
+          cart: state.cart.map((product) => {
+            if (action._id === product._id) {
+              product.purchaseQuantity = action.purchaseQuantity;
+            }
+            return product;
+          }),
         };
       case REMOVE_FROM_CART:
         let newState = state.cart.filter((product) => {
