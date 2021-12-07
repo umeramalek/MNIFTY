@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Form, Row, Col, FormGroup, Label, Input, Button } from 'reactstrap';
 import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
@@ -31,58 +32,80 @@ function Signup(props) {
     });
   };
 
+
   return (
     <div className="container my-1">
       <Link to="/login">← Go to Login</Link>
 
       <h2>Signup</h2>
-      <form onSubmit={handleFormSubmit}>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="firstName">First Name:</label>
-          <input
-            placeholder="First"
-            name="firstName"
-            type="firstName"
-            id="firstName"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="lastName">Last Name:</label>
-          <input
-            placeholder="Last"
-            name="lastName"
-            type="lastName"
-            id="lastName"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="email">Email:</label>
-          <input
-            placeholder="youremail@test.com"
-            name="email"
-            type="email"
-            id="email"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
-          <input
-            placeholder="******"
-            name="password"
-            type="password"
-            id="pwd"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
-        </div>
-      </form>
+
+      <Form onSubmit={handleFormSubmit}>
+        <Row form>
+          <Col md={6}>
+            <FormGroup className="flex-row space-between my-2">
+              <Label for="examplefirstName">
+                First Name
+              </Label>
+              <Input
+                id="examplefirstName"
+                name="firstName"
+                placeholder="First Name"
+                type="firstName"
+                onChange={handleChange}
+              />
+            </FormGroup>
+          </Col>
+          <Col md={6}>
+            <FormGroup className="flex-row space-between my-2">
+              <Label for="examplelastName">
+                Last Name
+              </Label>
+              <Input
+                id="examplelastName"
+                name="lastName"
+                placeholder="Last Name"
+                type="lastName"
+                onChange={handleChange}
+              />
+            </FormGroup>
+          </Col>
+          <Col md={6}>
+            <FormGroup className="flex-row space-between my-2">
+              <Label for="exampleEmail">
+                Email
+              </Label>
+              <Input
+                id="exampleEmail"
+                name="email"
+                placeholder="email "
+                type="email"
+                onChange={handleChange}
+              />
+            </FormGroup>
+          </Col>
+          <Col md={6}>
+            <FormGroup className="flex-row space-between my-2">
+              <Label for="examplePassword">
+                Password
+              </Label>
+              <Input
+                id="examplePassword"
+                name="password"
+                placeholder="password"
+                type="password"
+                onChange={handleChange}
+              />
+            </FormGroup>
+          </Col>
+        </Row>
+
+        <Button >
+          Sign up
+        </Button>
+      </Form>
     </div>
-  );
+
+  )
 }
 
 export default Signup;

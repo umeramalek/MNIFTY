@@ -218,10 +218,11 @@
  * [react-router-dom](https://www.npmjs.com/package/react-router-dom)
  * [react-scripts](https://www.npmjs.com/package/react-scripts)
  * [web-vitals](https://www.npmjs.com/package/web-vitals)
+ * [reactstrap](https://www.npmjs.com/package/reactstrap)
 
   ## Deployed Link
 
- * [Check out the site!!]()
+ * [Check out the site!!](https://morning-island-84133.herokuapp.com/)
 
   ## Repo Link
   - [Link to Repo](https://github.com/umeramalek/MNIFTY)

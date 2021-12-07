@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
+import { Form, FormGroup, Input, Label, Button } from 'reactstrap';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
 
@@ -34,41 +35,53 @@ function Login(props) {
 
   return (
     <div className="container my-1">
-      <Link to="/signup">← Go to Signup</Link>
+      <Link to="/signup"> Go to Sign Up </Link>
 
       <h2>Login</h2>
-      <form onSubmit={handleFormSubmit}>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="email">Email address:</label>
-          <input
-            placeholder="youremail@test.com"
+
+      <Form inline onSubmit={handleFormSubmit}>
+        <FormGroup floating className="flex-row space-between my-2">
+        <Label for="exampleEmail">
+            Email
+          </Label>
+          <Input
+            id="exampleEmail"
             name="email"
+            placeholder="Email"
             type="email"
-            id="email"
             onChange={handleChange}
           />
-        </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
-          <input
-            placeholder="******"
+        </FormGroup>
+        {' '}
+        <FormGroup floating className="flex-row space-between my-2">
+        <Label for="examplePassword">
+            Password
+          </Label>
+          <Input
+            id="examplePassword"
             name="password"
+            placeholder="Password"
             type="password"
-            id="pwd"
             onChange={handleChange}
           />
-        </div>
+
+        </FormGroup>
+        {' '}
         {error ? (
-          <div>
+          <div className="butt">
             <p className="error-text">The provided credentials are incorrect</p>
           </div>
         ) : null}
-        <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
-        </div>
-      </form>
+        <Button>
+          Submit
+        </Button>
+      </Form>
     </div>
-  );
+
+
+  )
+
 }
+
 
 export default Login;
